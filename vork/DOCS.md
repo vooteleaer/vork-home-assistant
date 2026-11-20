@@ -6,8 +6,8 @@
 
 ## Getting started
 
-1. Install the add-on and start it.
-2. Open the **Log** tab: after a few seconds it prints the dashboard's private link. Open it (**Open Web UI** opens the same dashboard; paste the link's key there once). The dashboard uses a certificate of its own, so the browser asks once.
+1. Install the add-on and start it. Turn on **Show in sidebar** if you like: the dashboard is then in Home Assistant's sidebar.
+2. **Open Web UI** opens the node's dashboard inside Home Assistant, signed in by Home Assistant. (The same dashboard is also on `https://<home assistant>:30742`, for a browser outside Home Assistant: open it with the private link the **Log** tab prints.)
 3. Link your devices: in the dashboard, **Devices → Show a code**, and scan it with the vØrk app on your phone (or open the link on another device's dashboard). Your devices are one group: link Home Assistant to one of them and it is linked to all.
 
 Then, from any of your devices, wherever they are: **`http://homeassistant.vork:8123`** (or its fixed IPv4 address, shown in the dashboard).

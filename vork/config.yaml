@@ -1,5 +1,5 @@
 name: vØrk
-version: "0.1.0"
+version: "0.2.0"
 slug: vork
 description: Your own private network between your devices, with no account and no company in the middle
 url: https://github.com/vooteleaer/vork
@@ -23,6 +23,11 @@ ports:
 ports_description:
   30742/tcp: The node's dashboard (HTTPS)
 webui: "https://[HOST]:[PORT:30742]/"
+# The dashboard in Home Assistant's own pages and sidebar, signed in by it.
+ingress: true
+ingress_port: 30743
+panel_icon: mdi:lan
+panel_title: vØrk
 options:
   name: homeassistant
 schema:

@@ -17,6 +17,9 @@ if [ ! -e "$C" ]; then
     sed -i 's|^# web = .*|web = "[::]:30742"|' "$C"
     grep -q '^web *=' "$C" || echo 'web = "[::]:30742"' >> "$C"
 fi
+# The dashboard in Home Assistant's pages (ingress): only the Supervisor's
+# proxy reaches it, and Home Assistant signs its users in.
+grep -q '^web_ingress *=' "$C" || echo 'web_ingress = "0.0.0.0:30743"' >> "$C"
 # The name from the add-on's options, kept up to date.
 if grep -q '^name *=' "$C"; then
     sed -i "s|^name *=.*|name = \"$NAME\"|" "$C"
