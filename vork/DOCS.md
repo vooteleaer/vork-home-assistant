@@ -10,7 +10,7 @@
 2. **Open Web UI** opens the node's dashboard inside Home Assistant, signed in by Home Assistant. (The same dashboard is also on `https://<home assistant>:30742`, for a browser outside Home Assistant: open it with the private link the **Log** tab prints.)
 3. Link your devices: in the dashboard, **Devices → Show a code**, and scan it with the vØrk app on your phone (or open the link on another device's dashboard). Your devices are one group: link Home Assistant to one of them and it is linked to all.
 
-If linking doesn't get through (Home Assistant can't reach the device that made the code), give it a connection first: **Settings → Connections**, add `host:port` of a node of yours that is reachable from the internet, then use the link again.
+If linking doesn't get through (Home Assistant can't reach the device that made the code), give it a connection first: **Settings → Connections**, add `host:port` of a node of yours that is reachable from the internet (or one of the [public nodes to start from](https://github.com/vooteleaer/vork#public-nodes-to-start-from)), then use the link again.
 
 Then, from any of your devices, wherever they are: **`http://homeassistant.vork:8123`** (or its fixed IPv4 address, shown in the dashboard).
 
