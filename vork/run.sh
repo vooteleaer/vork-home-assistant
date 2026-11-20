@@ -7,7 +7,9 @@ C=/data/vork.toml
 NAME=$(sed -n 's/.*"name": *"\([^"]*\)".*/\1/p' /data/options.json 2>/dev/null)
 NAME=${NAME:-homeassistant}
 
+NEW=
 if [ ! -e "$C" ]; then
+    NEW=1
     vork init --config "$C" --tun vork0
     # A port of its own, so it doesn't collide with other nodes behind the
     # same router (a phone, a NAS); the router is asked to open it (UPnP, PCP).
@@ -20,13 +22,22 @@ fi
 # The dashboard in Home Assistant's pages (ingress): only the Supervisor's
 # proxy reaches it, and Home Assistant signs its users in.
 grep -q '^web_ingress *=' "$C" || echo 'web_ingress = "0.0.0.0:30743"' >> "$C"
-# The name from the add-on's options, kept up to date.
-if grep -q '^name *=' "$C"; then
-    sed -i "s|^name *=.*|name = \"$NAME\"|" "$C"
-elif grep -q '^# name *=' "$C"; then
-    sed -i "s|^# name *=.*|name = \"$NAME\"|" "$C"
-else
-    echo "name = \"$NAME\"" >> "$C"
+# The name from the add-on's options, when the node is new or the option was
+# changed there: a name changed on the dashboard (Settings) is kept across
+# restarts. (From an add-on before 0.2.1, which didn't note the option: the
+# name the node has now is kept.)
+if [ -z "$NEW" ] && [ ! -e /data/name-option ] && grep -q '^name *=' "$C"; then
+    echo "$NAME" > /data/name-option
+fi
+if [ -n "$NEW" ] || [ "$NAME" != "$(cat /data/name-option 2>/dev/null)" ] || ! grep -q '^name *=' "$C"; then
+    if grep -q '^name *=' "$C"; then
+        sed -i "s|^name *=.*|name = \"$NAME\"|" "$C"
+    elif grep -q '^# name *=' "$C"; then
+        sed -i "s|^# name *=.*|name = \"$NAME\"|" "$C"
+    else
+        sed -i "1i name = \"$NAME\"" "$C"
+    fi
+    echo "$NAME" > /data/name-option
 fi
 
 echo "vØrk: $(vork version)"

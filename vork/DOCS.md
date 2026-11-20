@@ -16,7 +16,7 @@ Then, from any of your devices, wherever they are: **`http://homeassistant.vork:
 
 ## Options
 
-- **`name`**: Home Assistant's name in your network, so `name.vork` (default `homeassistant`).
+- **`name`**: Home Assistant's name in your network, so `name.vork` (default `homeassistant`). It's given to the node when the add-on is first started and whenever you change it here; a name changed on the dashboard (**Settings**) stays after a restart.
 
 The node's other settings are in its dashboard (**Settings**), and in `/data/vork.toml` in the add-on's data.
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- A name changed on the dashboard stays after a restart: the add-on's `name` option is given to the node only at the first start and when it is changed.
+
 ## 0.2.0
 
 - The vØrk node v0.2.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.2.0)).
