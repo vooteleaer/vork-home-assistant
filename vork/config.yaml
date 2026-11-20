@@ -1,0 +1,29 @@
+name: vØrk
+version: "0.1.0"
+slug: vork
+description: Your own private network between your devices, with no account and no company in the middle
+url: https://github.com/vooteleaer/vork
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: services
+boot: auto
+# The node's UDP port and its vork0 interface are the machine's: other
+# nodes reach it directly, and your devices reach Home Assistant by name.
+host_network: true
+privileged:
+  - NET_ADMIN
+devices:
+  - /dev/net/tun
+# The node's identity and settings are in /data: kept in backups.
+backup: hot
+ports:
+  30742/tcp: 30742
+ports_description:
+  30742/tcp: The node's dashboard (HTTPS)
+webui: "https://[HOST]:[PORT:30742]/"
+options:
+  name: homeassistant
+schema:
+  name: str
