@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- The vØrk node v0.3.1 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.3.1)): the map of your network moves smoothly.
+
 ## 0.3.0
 
 - The vØrk node v0.3.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.3.0)): a new node starts in the same network as everyone else, the dashboard draws a map of your devices.
