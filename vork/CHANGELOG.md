@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+- The vØrk node v0.3.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.3.0)): a new node starts in the same network as everyone else, the dashboard draws a map of your devices.
+
 ## 0.2.1
 
 - A name changed on the dashboard stays after a restart: the add-on's `name` option is given to the node only at the first start and when it is changed.
