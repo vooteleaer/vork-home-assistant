@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2
+
+- The vØrk node v0.3.2 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.3.2)): sessions no longer get stuck, direct links come back after an address changes, devices that went away show as offline.
+
 ## 0.3.1
 
 - The vØrk node v0.3.1 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.3.1)): the map of your network moves smoothly.
