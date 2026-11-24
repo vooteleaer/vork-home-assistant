@@ -2,6 +2,6 @@ build_from:
   amd64: ghcr.io/home-assistant/amd64-base:3.20
   aarch64: ghcr.io/home-assistant/aarch64-base:3.20
 args:
-  VORK_RELEASE: v0.3.2
-  VORK_SHA256_AMD64: 2d584dd43b251e0929e201a2c367928cd6daba92dd669c0580b2ada5895e3ac6
-  VORK_SHA256_AARCH64: ee891022c0f626c17dcc7a106f9635ee98c8d61597e7ed9b90509613b124ae26
+  VORK_RELEASE: v0.4.0
+  VORK_SHA256_AMD64: 176bcae4654a97e8e3b1c0bd63ac975f7ce67d3906bbf101f7bbabf2e5101501
+  VORK_SHA256_AARCH64: 0316fc63e8e2044ddacc6156fb43e5a4290f03913d06bb3a750a18da3bbedf9a
