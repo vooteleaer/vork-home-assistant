@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0
+
+- The vØrk node v0.5.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.5.0)): ESP32s with ESPHome join as vØrk Lite devices, linked from the dashboard, and the add-on announces their ESPHome API on Home Assistant's network, so Home Assistant discovers them wherever they are.
+
 ## 0.4.0
 
 - The vØrk node v0.4.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.4.0)): sessions to a service on a device next to you take the direct path alone (storage between two devices on one network is far faster), and your devices tell each other what runs on them.
