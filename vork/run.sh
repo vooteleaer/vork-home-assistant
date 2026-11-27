@@ -22,6 +22,10 @@ fi
 # The dashboard in Home Assistant's pages (ingress): only the Supervisor's
 # proxy reaches it, and Home Assistant signs its users in.
 grep -q '^web_ingress *=' "$C" || echo 'web_ingress = "0.0.0.0:30743"' >> "$C"
+# The local API for applications where another add-on reaches it (the vØrk
+# storage add-on maps /share too).
+mkdir -p /share/vork
+grep -q '^api *=' "$C" || echo 'api = "/share/vork/api.sock"' >> "$C"
 # The name from the add-on's options, when the node is new or the option was
 # changed there: a name changed on the dashboard (Settings) is kept across
 # restarts. (From an add-on before 0.2.1, which didn't note the option: the

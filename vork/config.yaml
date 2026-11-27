@@ -1,5 +1,5 @@
 name: vØrk
-version: "0.6.0"
+version: "0.6.1"
 slug: vork
 description: Your own private network between your devices, with no account and no company in the middle
 url: https://github.com/vooteleaer/vork
@@ -18,6 +18,10 @@ devices:
   - /dev/net/tun
 # The node's identity and settings are in /data: kept in backups.
 backup: hot
+# Its local API for applications (the vØrk storage add-on): a socket in
+# /share/vork, which another add-on can reach.
+map:
+  - share:rw
 ports:
   30742/tcp: 30742
 ports_description:

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+
+- The node's local API for applications is in `/share/vork` (the add-on maps `/share`), so the new vØrk storage add-on can run on it.
+
 ## 0.6.0
 
 - The vØrk node v0.6.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.6.0)): Home Assistant can be an exit node for your other devices, IPv6 included when its network has it (turn on **Offer this node as an exit** on the dashboard's Exit node page).
