@@ -21,8 +21,9 @@ until [ -S "$VORK_API" ]; do
 done
 
 # Its page: only the Supervisor's ingress proxy may reach it, and it passes
-# the browser's Host on.
-VORK_WEB_LISTEN=0.0.0.0:8741 VORK_WEB_ALLOW=172.30.32.2/32 VORK_WEB_HOSTS='*' \
+# the browser's Host on; Home Assistant shows the page in a frame of its own
+# origin.
+VORK_WEB_LISTEN=0.0.0.0:8741 VORK_WEB_ALLOW=172.30.32.2/32 VORK_WEB_HOSTS='*' VORK_WEB_FRAMED=1 \
     "$B/vork-web" --store "$STORE" &
 W=$!
 
