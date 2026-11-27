@@ -1,0 +1,29 @@
+name: vØrk storage
+version: "0.6.0"
+slug: vork_storage
+description: Your files, photos and contacts on your own devices, encrypted and kept in sync by them (needs the vØrk add-on)
+url: https://github.com/vooteleaer/vork-storage
+arch:
+  - amd64
+  - aarch64
+init: false
+startup: application
+boot: auto
+# The vØrk add-on's local API: its socket in /share/vork (the vØrk add-on
+# 0.6.1 or newer puts it there). Storage reaches the network only through it.
+map:
+  - share:rw
+# The store (your libraries' data, encrypted) is in /data: in backups.
+backup: hot
+# Its page in Home Assistant's own pages and sidebar, signed in by Home
+# Assistant: only the Supervisor's proxy reaches it.
+ingress: true
+ingress_port: 8741
+panel_icon: mdi:database
+panel_title: vØrk storage
+options:
+  name: homeassistant
+  max_store: 20G
+schema:
+  name: str
+  max_store: match(^[0-9]+[KMGT]?$)

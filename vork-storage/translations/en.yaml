@@ -1,0 +1,7 @@
+configuration:
+  name:
+    name: Name
+    description: This device's name among your devices, as vØrk storage's keep rules see it.
+  max_store:
+    name: Disk limit
+    description: How much of the disk storage may use (20G, 500G, 1T). It's in Home Assistant's backups.

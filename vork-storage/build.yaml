@@ -1,0 +1,7 @@
+build_from:
+  amd64: ghcr.io/home-assistant/amd64-base:3.20
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.20
+args:
+  STORAGE_RELEASE: v0.6.0
+  STORAGE_SHA256_AMD64: 58085c208e4ac587ffcf4be82630699cf5ceb1571cb14160f7e44852572775b5
+  STORAGE_SHA256_AARCH64: 1c375fad5e5431f44590b2be166af0898729f094b132b9c2d1f38c4e0b780c4c
