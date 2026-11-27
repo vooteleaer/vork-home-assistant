@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+- The vØrk node v0.6.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.6.0)): Home Assistant can be an exit node for your other devices, IPv6 included when its network has it (turn on **Offer this node as an exit** on the dashboard's Exit node page).
+
 ## 0.5.0
 
 - The vØrk node v0.5.0 ([release notes](https://github.com/vooteleaer/vork/releases/tag/v0.5.0)): ESP32s with ESPHome join as vØrk Lite devices, linked from the dashboard, and the add-on announces their ESPHome API on Home Assistant's network, so Home Assistant discovers them wherever they are.
