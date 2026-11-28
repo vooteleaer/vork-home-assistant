@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "hassio_confirm": {
+        "title": "vØrk storage",
+        "description": "Show the vØrk storage add-on's libraries in the media browser?"
+      },
+      "user": {
+        "title": "vØrk storage",
+        "description": "The vØrk storage add-on offers this by itself once it runs. By hand: its address (http://<add-on hostname>:8741) and the media token from its log.",
+        "data": {
+          "url": "Address",
+          "token": "Media token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The add-on didn't answer, or the token is wrong."
+    },
+    "abort": {
+      "already_configured": "vØrk storage is set up already.",
+      "cannot_connect": "The add-on didn't answer, or the token is wrong.",
+      "single_instance_allowed": "vØrk storage is set up already."
+    }
+  }
+}

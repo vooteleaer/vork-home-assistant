@@ -19,6 +19,16 @@ vØrk storage runs on vØrk: install the **vØrk** add-on from this repository f
 - **`name`**: this device's name among your devices, as vØrk storage's keep rules see it (default `homeassistant`).
 - **`max_store`**: how much of the disk storage may use (`20G`, `500G`, `1T`). Your libraries' data is in the add-on's data folder, so it's in Home Assistant's backups: keep it small if your backups go somewhere small.
 
+## In the media browser
+
+Your libraries can be in Home Assistant's **Media** page, beside its own media and Frigate's: folders, photos, videos and music, each file fetched from vØrk storage as it's opened (from this device, or from your other devices if it isn't kept here). Nothing is copied into Home Assistant's media folder. It takes the **vØrk storage** integration:
+
+1. In HACS: **⋮ → Custom repositories**, add `https://github.com/vooteleaer/vork-home-assistant` as an **Integration**, then download **vØrk storage** and restart Home Assistant.
+2. With this add-on running, **Settings → Devices & services** shows vØrk storage as discovered: **Add**. (By hand instead: **Add integration → vØrk storage**, the address from the add-on's log and the token in its `/data/media-token`.)
+3. **Media → vØrk storage**.
+
+The integration reads files with a token only it and this add-on know; it can't change anything.
+
 ## What's not here yet
 
-- Libraries as folders for Home Assistant or other add-ons (Media, Music Assistant): they need FUSE, which add-ons don't get. On a NAS beside Home Assistant, the Docker setup does it.
+- Libraries as folders for other add-ons (Music Assistant, Plex): they need FUSE, which add-ons don't get. On a NAS beside Home Assistant, the Docker setup does it.

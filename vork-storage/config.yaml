@@ -1,5 +1,5 @@
 name: vØrk storage
-version: "0.6.1"
+version: "0.6.2"
 slug: vork_storage
 description: Your files, photos and contacts on your own devices, encrypted and kept in sync by them (needs the vØrk add-on)
 url: https://github.com/vooteleaer/vork-storage
@@ -18,6 +18,10 @@ backup: hot
 # Its page in Home Assistant's own pages and sidebar, signed in by Home
 # Assistant: only the Supervisor's proxy reaches it.
 ingress: true
+# Its libraries in Home Assistant's media browser: it tells the vork_storage
+# integration where it is and the token it reads them with.
+discovery:
+  - vork_storage
 ingress_port: 8741
 panel_icon: mdi:database
 panel_title: vØrk storage

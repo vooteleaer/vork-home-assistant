@@ -1,0 +1,14 @@
+{
+  "domain": "vork_storage",
+  "name": "vØrk storage",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["http", "media_source"],
+  "documentation": "https://github.com/vooteleaer/vork-home-assistant",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/vooteleaer/vork-home-assistant/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.6.2"
+}
